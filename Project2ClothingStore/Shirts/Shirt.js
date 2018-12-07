@@ -10,7 +10,7 @@ var Shirt = (function (_super) {
         _this.randomClass = new RandomHelper();
         _this._color = _this.randomClass.getRandomColor();
         _this.update_price = _this.randomClass.getRandomPrice();
-        _this._size = _this.randomClass.getRandomSize();
+        _this.update_size = _this.randomClass.getRandomSize();
         _this.update_lengthOfSleeves = _this.randomClass.getRandomSleeveSize();
         return _this;
     }
@@ -22,7 +22,20 @@ var Shirt = (function (_super) {
             if (price > this.randomClass.minShirtPrice && price < this.randomClass.maxShirtPrice)
                 this._price = price;
             else
-                throw new RangeError("Parameter must be between " + this.randomClass.minShirtPrice + " and " + this.randomClass.minShirtPrice);
+                throw new RangeError("Parameter must be between " + this.randomClass.minShirtPrice + " and " + this.randomClass.maxShirtPrice);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Shirt.prototype, "update_size", {
+        get: function () {
+            return this._size;
+        },
+        set: function (size) {
+            if (size > this.randomClass.minShirtSize && size < this.randomClass.maxShirtSize)
+                this._price = size;
+            else
+                throw new RangeError("Parameter must be between " + this.randomClass.minShirtSize + " and " + this.randomClass.maxShirtSize);
         },
         enumerable: true,
         configurable: true
@@ -32,12 +45,13 @@ var Shirt = (function (_super) {
             return this.lengthOfSleeves;
         },
         set: function (len_sleeve) {
-            len_sleeve = 15;
-            if (len_sleeve < this.randomClass.minLengthSleeveSize && len_sleeve > this.randomClass.maxLengthSleeveSize) {
-                throw new Error("Parameter must be between " + " " + this.randomClass.minLengthSleeveSize + " and " + this.randomClass.maxLengthSleeveSize);
-            }
-            else
+            if ((len_sleeve > this.randomClass.minLengthSleeveSize) && (len_sleeve < this.randomClass.maxLengthSleeveSize)) {
                 this.lengthOfSleeves = len_sleeve;
+            }
+            else {
+                var str = "Parameter must be between " + " " + this.randomClass.minLengthSleeveSize + " and " + this.randomClass.maxLengthSleeveSize;
+                throw new Error(str);
+            }
         },
         enumerable: true,
         configurable: true

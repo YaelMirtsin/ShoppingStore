@@ -16,7 +16,7 @@
     }
 
     get update_dateProduction(): string {
-        return (this.dateProduction).toDateString();
+        return (this.dateProduction).toLocaleDateString();
     }
 
     daysInMonth(m: number, y: number): number {
@@ -50,7 +50,7 @@
             document.write(`<strong>Color:</strong>${this._colorShoes}<br/>`);
         } else document.write(`<strong>Color:</strong><font color=${this._colorShoes}>${this._colorShoes}</font><br/>`);
         document.write(`<strong>Price: </strong>${this.update_priceShoes}<br/><strong>Size: </strong>${this._sizeShoes}<br/><strong>Made in: </strong>${this.madeIn}<br/>
-                    <strong>Is laces? </strong>${this.isLaces}<br/><strong>Production date: </strong>${this.dateProduction}<br/>`);
+                    <strong>Is laces? </strong>${this.isLaces}<br/><strong>Production date: </strong>${this.update_dateProduction}<br/>`);
     }
 
     displayImage(): void {

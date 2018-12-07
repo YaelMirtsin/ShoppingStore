@@ -21,8 +21,7 @@
             document.write(`<strong>Color:</strong>${this._color}<br/>`);
         } else document.write(`<strong>Color:</strong><font color=${this._color}>${this._color}</font><br/>`);
 
-        document.write(`<strong>Price: </strong>${this.update_price}<br/><strong>Caption of the shirt: </strong>${this.updateCaptionOfShirt}<br/>`);
-        
+        document.write(`<strong>Price: </strong>${this.update_price}<br/><strong>Caption of the shirt: </strong>${this.updateCaptionOfShirt}<br/>`);    
     }
 
     displayImage(): void {

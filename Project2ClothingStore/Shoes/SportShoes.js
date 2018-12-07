@@ -15,7 +15,7 @@ var SportShoes = (function (_super) {
     }
     Object.defineProperty(SportShoes.prototype, "update_dateProduction", {
         get: function () {
-            return (this.dateProduction).toDateString();
+            return (this.dateProduction).toLocaleDateString();
         },
         set: function (prodDate) {
             var position1 = prodDate.indexOf("/") + 1;
@@ -60,7 +60,7 @@ var SportShoes = (function (_super) {
         }
         else
             document.write("<strong>Color:</strong><font color=" + this._colorShoes + ">" + this._colorShoes + "</font><br/>");
-        document.write("<strong>Price: </strong>" + this.update_priceShoes + "<br/><strong>Size: </strong>" + this._sizeShoes + "<br/><strong>Made in: </strong>" + this.madeIn + "<br/>\n                    <strong>Is laces? </strong>" + this.isLaces + "<br/><strong>Production date: </strong>" + this.dateProduction + "<br/>");
+        document.write("<strong>Price: </strong>" + this.update_priceShoes + "<br/><strong>Size: </strong>" + this._sizeShoes + "<br/><strong>Made in: </strong>" + this.madeIn + "<br/>\n                    <strong>Is laces? </strong>" + this.isLaces + "<br/><strong>Production date: </strong>" + this.update_dateProduction + "<br/>");
     };
     SportShoes.prototype.displayImage = function () {
         var str = "<br><img src=\"" + this.imagePath + "\"/><br>";
