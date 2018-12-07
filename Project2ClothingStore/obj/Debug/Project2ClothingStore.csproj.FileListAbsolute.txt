@@ -1,0 +1,7 @@
+C:\Users\USER\source\repos\Project2ClothingStore\Project2ClothingStore\bin\TypeScriptHTMLApp1.dll.config
+C:\Users\USER\source\repos\Project2ClothingStore\Project2ClothingStore\bin\TypeScriptHTMLApp1.dll
+C:\Users\USER\source\repos\Project2ClothingStore\Project2ClothingStore\bin\TypeScriptHTMLApp1.pdb
+C:\Users\USER\source\repos\Project2ClothingStore\Project2ClothingStore\obj\Debug\Project2ClothingStore.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\Project2ClothingStore\Project2ClothingStore\obj\Debug\TypeScriptHTMLApp1.dll
+C:\Users\USER\source\repos\Project2ClothingStore\Project2ClothingStore\obj\Debug\TypeScriptHTMLApp1.pdb
+C:\Users\USER\source\repos\Project2ClothingStore\Project2ClothingStore\obj\Debug\Project2ClothingStore.csprojAssemblyReference.cache
