@@ -14,7 +14,4 @@
     getPriceWithoutVat(): number {
         return this._price - (this._price / 100 * this.tax);
     }
-
-    abstract displayDetails(): void;
-    abstract displayImage(): void;
 }

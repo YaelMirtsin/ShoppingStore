@@ -19,7 +19,7 @@ var Shirt = (function (_super) {
             return this._price;
         },
         set: function (price) {
-            if (price > this.randomClass.minShirtPrice && price < this.randomClass.maxShirtPrice)
+            if (price >= this.randomClass.minShirtPrice && price <= this.randomClass.maxShirtPrice)
                 this._price = price;
             else
                 throw new RangeError("Parameter must be between " + this.randomClass.minShirtPrice + " and " + this.randomClass.maxShirtPrice);
@@ -32,8 +32,8 @@ var Shirt = (function (_super) {
             return this._size;
         },
         set: function (size) {
-            if (size > this.randomClass.minShirtSize && size < this.randomClass.maxShirtSize)
-                this._price = size;
+            if (size >= this.randomClass.minShirtSize && size <= this.randomClass.maxShirtSize)
+                this._size = size;
             else
                 throw new RangeError("Parameter must be between " + this.randomClass.minShirtSize + " and " + this.randomClass.maxShirtSize);
         },
@@ -45,7 +45,7 @@ var Shirt = (function (_super) {
             return this.lengthOfSleeves;
         },
         set: function (len_sleeve) {
-            if ((len_sleeve > this.randomClass.minLengthSleeveSize) && (len_sleeve < this.randomClass.maxLengthSleeveSize)) {
+            if ((len_sleeve >= this.randomClass.minLengthSleeveSize) && (len_sleeve <= this.randomClass.maxLengthSleeveSize)) {
                 this.lengthOfSleeves = len_sleeve;
             }
             else {

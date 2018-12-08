@@ -1,12 +1,12 @@
 ﻿abstract class Shirt extends Item {
-    _size: number;
+   private _size: number;
    private _price: number;
     _color: string;
    private lengthOfSleeves: number;
     randomClass: RandomHelper = new RandomHelper();
 
     set update_price(price: number) {
-        if (price > this.randomClass.minShirtPrice && price < this.randomClass.maxShirtPrice)
+        if (price >= this.randomClass.minShirtPrice && price <= this.randomClass.maxShirtPrice)
             this._price = price;
         else throw new RangeError("Parameter must be between " + this.randomClass.minShirtPrice + " and " + this.randomClass.maxShirtPrice );
     }
@@ -15,8 +15,8 @@
     }
 
     set update_size(size: number) {
-        if (size > this.randomClass.minShirtSize && size < this.randomClass.maxShirtSize)
-            this._price = size;
+        if (size >= this.randomClass.minShirtSize && size <= this.randomClass.maxShirtSize)
+            this._size = size;
         else throw new RangeError("Parameter must be between " + this.randomClass.minShirtSize + " and " + this.randomClass.maxShirtSize);
     }
     get update_size(): number {
@@ -24,7 +24,7 @@
     }
 
     set update_lengthOfSleeves(len_sleeve: number) {
-        if ((len_sleeve > this.randomClass.minLengthSleeveSize) && (len_sleeve < this.randomClass.maxLengthSleeveSize)) {
+        if ((len_sleeve >= this.randomClass.minLengthSleeveSize) && (len_sleeve <= this.randomClass.maxLengthSleeveSize)) {
             this.lengthOfSleeves = len_sleeve;
         } else {
             var str: string = "Parameter must be between " + " " + this.randomClass.minLengthSleeveSize + " and " + this.randomClass.maxLengthSleeveSize;

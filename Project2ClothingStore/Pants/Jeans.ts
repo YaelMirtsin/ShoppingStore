@@ -1,9 +1,9 @@
 ﻿class Jeans extends Pants {
-    imagePath: string = `./Store Items/04.jpg`;
     priceJeans: number;
     sizeJeans: number;
     lengthOfJeans: number;
     isRipped: boolean;
+    imagePath: string = `./Store Items/04.jpg`;
 
     constructor(manuf: string, model: string, price: number, size: number, length: number, ripped: boolean) {
         super(manuf, model);

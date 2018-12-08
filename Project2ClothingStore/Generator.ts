@@ -71,11 +71,13 @@
                                                  this.randomClass.getRandomThickness(), this.randomClass.getRandomIsRainCoat());
                 return objItem[product];
                     
-            case 15: objItem[product] = new CasketHat(this.randomClass.getRandomCasketManufacture(), this.randomClass.getRandomCasketModel(), this.randomClass.getRandomColor(),
+            case 15: objItem[product] = new CasketHat(this.randomClass.getRandomCasketManufacture(), this.randomClass.getRandomCasketModel(),
+                                                      this.randomClass.getRandomHatPrice(),this.randomClass.getRandomColor(),
                                                       this.randomClass.getRandomDiameter(), this.randomClass.getRandomIsAdvertisement());
                 return objItem[product];
 
-            case 16: objItem[product] = new TopHat(this.randomClass.getRandomTopHatManufacture(), this.randomClass.getRandomTopHatModel(), "Black",
+            case 16: objItem[product] = new TopHat(this.randomClass.getRandomTopHatManufacture(), this.randomClass.getRandomTopHatModel(),
+                                                    this.randomClass.getRandomHatPrice(), "Black",
                                                    this.randomClass.getRandomDiameter(), this.randomClass.getRandomHighTopHat());
                 return objItem[product];
 

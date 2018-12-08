@@ -52,6 +52,8 @@ var RandomHelper = (function () {
         this.maxSunGlassesPrice = 1500;
         this.minDistance = 30;
         this.maxDistance = 40;
+        this.minHatPrice = 50;
+        this.maxHatPrice = 200;
     }
     // --------------------------------------
     // Generator - Class Shirt - random functions
@@ -308,6 +310,10 @@ var RandomHelper = (function () {
     };
     RandomHelper.prototype.getRandomTopHatManufacture = function () {
         return "SilkTopHats";
+    };
+    RandomHelper.prototype.getRandomHatPrice = function () {
+        var price = Math.floor(Math.random() * (this.maxHatPrice - this.minHatPrice + 1) + this.minHatPrice);
+        return price;
     };
     return RandomHelper;
 }());

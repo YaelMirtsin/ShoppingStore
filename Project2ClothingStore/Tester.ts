@@ -37,6 +37,9 @@
         a.displayDetails();
         this.displayPriceWithoutVat(a.getPriceWithoutVat());
         document.write(`<strong>Brand:</strong> ${a.brand()}<br/>`);
+        if (a instanceof Belt) {
+            document.write(`<strong>The color of the buckle is: </strong>${(a as Belt).getColorBuckle()}<br/>`);
+        }
         a.displayImage();
         document.write(`<hr/><br/><br/>`);
     }

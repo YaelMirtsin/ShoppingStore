@@ -91,6 +91,8 @@
     readonly maxSunGlassesPrice: number = 1500;
     readonly minDistance: number = 30;
     readonly maxDistance: number = 40;
+    readonly minHatPrice: number = 50;
+    readonly maxHatPrice: number = 200;
     
     // --------------------------------------
 
@@ -374,6 +376,10 @@
     }
     getRandomTopHatManufacture(): string {
         return "SilkTopHats";
+    }
+    getRandomHatPrice(): number {
+        let price: number = Math.floor(Math.random() * (this.maxHatPrice - this.minHatPrice + 1) + this.minHatPrice);
+        return price;
     }
 }
 

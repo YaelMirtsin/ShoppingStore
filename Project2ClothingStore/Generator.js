@@ -51,10 +51,10 @@ var Generator = (function () {
                 objItem[product] = new Coat(this.randomClass.getRandomManufacture(), this.randomClass.getRandomModel(), this.randomClass.getRandomThickness(), this.randomClass.getRandomIsRainCoat());
                 return objItem[product];
             case 15:
-                objItem[product] = new CasketHat(this.randomClass.getRandomCasketManufacture(), this.randomClass.getRandomCasketModel(), this.randomClass.getRandomColor(), this.randomClass.getRandomDiameter(), this.randomClass.getRandomIsAdvertisement());
+                objItem[product] = new CasketHat(this.randomClass.getRandomCasketManufacture(), this.randomClass.getRandomCasketModel(), this.randomClass.getRandomHatPrice(), this.randomClass.getRandomColor(), this.randomClass.getRandomDiameter(), this.randomClass.getRandomIsAdvertisement());
                 return objItem[product];
             case 16:
-                objItem[product] = new TopHat(this.randomClass.getRandomTopHatManufacture(), this.randomClass.getRandomTopHatModel(), "Black", this.randomClass.getRandomDiameter(), this.randomClass.getRandomHighTopHat());
+                objItem[product] = new TopHat(this.randomClass.getRandomTopHatManufacture(), this.randomClass.getRandomTopHatModel(), this.randomClass.getRandomHatPrice(), "Black", this.randomClass.getRandomDiameter(), this.randomClass.getRandomHighTopHat());
                 return objItem[product];
             case 17:
                 objItem[product] = new Belt(this.randomClass.getRandomBeltManufacture(), this.randomClass.getRandomBeltModel(), this.randomClass.getRandomBeltColor(), this.randomClass.getRandomBeltPrice(), this.randomClass.getRandomBuckleColor(), this.randomClass.getRandomBuckleMaterial(), this.randomClass.getRandomHeigthBelt(), this.randomClass.getRandomLengthBelt(), this.randomClass.getRandomWidthInMillimetrBelt());

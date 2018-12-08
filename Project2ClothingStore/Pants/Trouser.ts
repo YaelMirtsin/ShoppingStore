@@ -1,9 +1,9 @@
 ﻿class Trouser extends Pants {
-    imagePath: string = `./Store Items/05.jpg`;
     pricePants: number;
     sizePants: number;
     lengthOfTrouser: number;
     numOfPockets: number;
+    imagePath: string = `./Store Items/05.jpg`;
 
     constructor(manuf: string, model: string, price: number, size: number, length: number, pockets: number) {
         super(manuf, model);

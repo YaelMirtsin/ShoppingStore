@@ -8,13 +8,8 @@ var Accessories = (function (_super) {
     function Accessories(manuf, model) {
         var _this = _super.call(this, manuf, model) || this;
         _this.randomClass = new RandomHelper();
-        _this._size = _this.randomClass.getRandomSize();
-        _this._price = _this.randomClass.getRandomPrice();
         return _this;
     }
-    Accessories.prototype.getPriceWithoutVat = function () {
-        return this._price - (this._price / 100 * this.tax);
-    };
     return Accessories;
 }(Item));
 //# sourceMappingURL=Accessories.js.map
